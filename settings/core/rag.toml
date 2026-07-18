@@ -1,0 +1,23 @@
+# Akira RAG configuration — see AKIRA-V3.md §6
+[vault]
+repo_path = 'C:\path\to\Akira'
+vault_path = 'C:\path\to\Akira\akira'
+
+[lmstudio]
+base_url = "http://127.0.0.1:1234/v1"
+# nomic is properly typed "embeddings" in LM Studio; jina-v5 is typed "llm"
+# and /v1/embeddings refuses it. Switch: change these 3 lines + --rebuild --live
+embedding_model = "text-embedding-nomic-embed-text-v1.5"
+chat_model = "qwen3-vl-8b-instruct"
+query_prefix = "search_query: "
+passage_prefix = "search_document: "
+
+[index]
+store_path = "rag_store/akira.sqlite"   # relative to repo_path
+chunk_max_chars = 1600
+chunk_overlap_chars = 200
+include_folders = ["concepts", "entities", "sources", "topics", "notes", "queries"]
+
+[retrieval]
+initial_vector_results = 24
+final_context_items = 10

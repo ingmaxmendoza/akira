@@ -1,0 +1,26 @@
+# personal vault content — the template ships structure + tooling, not notes
+akira/
+
+__pycache__/
+
+# runtime state
+logs/
+rag_store/
+.claims/
+STOP
+scratch_*.pkl
+scratch_*.npy
+
+# local claude config
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# personal session logs (append-only, not part of the template)
+MD/FILL-LOG.md
+MD/CONCEPT-LOG.md
+MD/EXHIBITION-LOG.md
+MD/ENTITY-LOG.md
+
+# superseded / personal
+MD/topics.md
+MD/color-schemes.md
