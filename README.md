@@ -7,6 +7,9 @@ handle everything mechanical — minimizing token requirements** by reserving th
 judgment calls only. The vault is queryable locally via a RAG store (SQLite + LM Studio
 embeddings, exposed as an MCP server), and Zotero is the sole source-ingest pipeline.
 
+<img width="1286" height="781" alt="image_2026-07-17_233204670" src="https://github.com/user-attachments/assets/e010ac74-4821-4af2-b809-01a004cf04ac" />
+
+
 Three principles (full spec in [`MD/AKIRA-V3.md`](MD/AKIRA-V3.md)):
 
 1. **Script-first** — anything mechanical (scanning, linking, indexing, auditing) is a script
